@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/garden2gardenApp.iml" filepath="$PROJECT_DIR$/.idea/modules/garden2gardenApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/garden2gardenApp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/garden2gardenApp_main.iml" group="garden2gardenApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/garden2gardenApp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/garden2gardenApp_test.iml" group="garden2gardenApp" />
+    </modules>
+  </component>
+</project>
