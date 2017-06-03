@@ -9,7 +9,7 @@ const ApplicationStyles = {
   screen: {
     mainContainer: {
       flex: 1,
-      backgroundColor: Colors.transparent
+      backgroundColor: Colors.maryBackground
     },
     backgroundImage: {
       position: 'absolute',
@@ -30,7 +30,7 @@ const ApplicationStyles = {
     sectionText: {
       ...Fonts.style.normal,
       paddingVertical: Metrics.doubleBaseMargin,
-      color: Colors.snow,
+      color: Colors.maryText,
       marginVertical: Metrics.smallMargin,
       textAlign: 'center'
     },

@@ -7,12 +7,21 @@ export default StyleSheet.create({
     paddingBottom: Metrics.baseMargin
   },
   logo: {
-    marginTop: Metrics.doubleSection,
+    marginTop: 20,
+    marginBottom: 0,
     height: Metrics.images.logo,
     width: Metrics.images.logo,
     resizeMode: 'contain'
   },
   centered: {
     alignItems: 'center'
-  }
+  },
+ section: {
+  marginHorizontal: Metrics.section,
+  marginBottom: 20,
+  padding: 10
+ },
+ sectionText: {
+  
+}
 })
