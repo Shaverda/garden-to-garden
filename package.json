@@ -1,0 +1,19 @@
+{
+  "name": "garden-to-garden",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.android.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaverda/garden-to-garden.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shaverda/garden-to-garden/issues"
+  },
+  "homepage": "https://github.com/Shaverda/garden-to-garden#readme"
+}
