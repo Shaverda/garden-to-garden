@@ -71,6 +71,7 @@ var ProfileEntry = React.createClass({
     render: function () { 
         return (
                 <View style={form_styles.container}>
+                <Image source={Images.background} style={styles.backgroundImage} resizeMode='repeat' />
                      <Form
                       ref="form"
                       type={User}
