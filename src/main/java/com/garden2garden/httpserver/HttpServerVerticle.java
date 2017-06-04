@@ -9,6 +9,7 @@ import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
+import io.vertx.ext.web.handler.BodyHandler;
 
 import com.garden2garden.httpserver.handlers.CreateAccountHandler;
 import com.garden2garden.util.Logger;
@@ -65,19 +66,21 @@ public class HttpServerVerticle extends AbstractVerticle
 	{
 		EventBus eventBus = vertx.eventBus();
 
+		router.route().handler(BodyHandler.create());
+
 		// Account Creation
 		router.post("/accounts/create").handler(requestContext ->
 		{
 			// TODO: Handle account creation
 			// This should be handled by adding an event to the eventbus and letting a different verticle handle it async
-			eventBus.<Buffer>send(CreateAccountHandler.ADDRESS, requestContext.getBody(), result ->
+			eventBus.<String>send(CreateAccountHandler.ADDRESS, requestContext.getBody(), result ->
 			{
 				if (result.succeeded())
 				{
-					Logger.info("New UUID after being serialized over the eventbus: " + result.result().body().toJsonObject().mapTo(UUID.class));
+					Logger.info("New UUID after being serialized over the eventbus: " + UUID.fromString(result.result().body()));
 
 					JsonObject responseBody = new JsonObject();
-					responseBody.put("userId", result.result().body().toJsonObject().mapTo(UUID.class));
+					responseBody.put("userId", result.result().body());
 					HttpServerResponse response = requestContext.response();
 					response.putHeader("content-type", "text/plain");
 					response.end(responseBody.toString());

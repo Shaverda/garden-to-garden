@@ -5,28 +5,29 @@ package com.garden2garden.events;
  */
 public class CreateAccountRequest
 {
-	private String name;
-	private String Email;
+	private String accountName;
+	private String email;
 	private String location; //TODO This will change
+	private String password;
 
-	public String getName()
+	public String getAccountName()
 	{
-		return name;
+		return accountName;
 	}
 
-	public void setName(String name)
+	public void setAccountName(String accountName)
 	{
-		this.name = name;
+		this.accountName = accountName;
 	}
 
 	public String getEmail()
 	{
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email)
 	{
-		Email = email;
+		this.email = email;
 	}
 
 	public String getLocation()
@@ -37,5 +38,15 @@ public class CreateAccountRequest
 	public void setLocation(String location)
 	{
 		this.location = location;
+	}
+
+	public String getPassword()
+	{
+		return password;
+	}
+
+	public void setPassword(String password)
+	{
+		this.password = password;
 	}
 }

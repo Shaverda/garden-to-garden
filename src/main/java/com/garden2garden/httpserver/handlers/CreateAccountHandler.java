@@ -4,6 +4,7 @@ import java.util.UUID;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.eventbus.Message;
+import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 
 import com.garden2garden.events.CreateAccountRequest;
@@ -43,7 +44,7 @@ public class CreateAccountHandler extends AbstractVerticle
 			msg.reply("Failure"); // TODO: this
 		}
 
-		msg.reply(JsonObject.mapFrom(createAccount(request)));
+		msg.reply(createAccount(request).toString());
 	}
 
 	/**
