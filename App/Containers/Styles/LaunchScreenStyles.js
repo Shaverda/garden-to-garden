@@ -26,5 +26,10 @@ export default StyleSheet.create({
 },
  buttons: {
     marginTop: 130
+ },
+ catchphrase: {
+     height: 25,
+     width: Metrics.images.logo,
+     resizeMode: 'contain'
  }
 })

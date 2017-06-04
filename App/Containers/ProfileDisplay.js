@@ -1,5 +1,6 @@
 import React from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
+import BottomNav from '../Components/BottomNav.js'
 
 import { Images } from '../Themes'
 
@@ -22,6 +23,7 @@ export default class ProfileDisplay extends React.Component {
                 </View>
                 
                 </ScrollView>
+                <BottomNav />
                 </View>
                 )
     }
