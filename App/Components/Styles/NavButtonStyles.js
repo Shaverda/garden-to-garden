@@ -3,7 +3,7 @@ import { Fonts, Colors, Metrics } from '../../Themes/'
 
 export default StyleSheet.create({
      button: {
-         width: 45,
+         width: 80,
          height: 45,
          borderRadius: 5,
          marginHorizontal: Metrics.section,
@@ -17,5 +17,5 @@ export default StyleSheet.create({
          fontWeight: 'bold',
          fontSize: Fonts.size.medium,
          marginVertical: Metrics.baseMargin
-        }
+    }
 })
