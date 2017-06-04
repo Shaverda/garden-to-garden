@@ -13,6 +13,7 @@ import io.vertx.ext.web.Router;
 import io.vertx.ext.web.handler.BodyHandler;
 
 import com.garden2garden.httpserver.handlers.CreateAccountHandler;
+import com.garden2garden.httpserver.handlers.GetAccountHandler;
 import com.garden2garden.persistence.PersistenceProvider;
 import com.garden2garden.util.Logger;
 
@@ -60,6 +61,8 @@ public class HttpServerVerticle extends AbstractVerticle
 
 		vertx.deployVerticle(PersistenceProvider.getPersistenceLayer());
 
+		vertx.deployVerticle(new GetAccountHandler());
+
 		startFuture.complete();
 	}
 
@@ -83,7 +86,7 @@ public class HttpServerVerticle extends AbstractVerticle
 					JsonObject responseBody = new JsonObject();
 					responseBody.put("userId", result.result().body());
 					HttpServerResponse response = requestContext.response();
-					response.putHeader("content-type", "text/plain");
+					response.putHeader("content-type", "application/json");
 					response.end(responseBody.toString());
 				}
 				else
@@ -93,8 +96,33 @@ public class HttpServerVerticle extends AbstractVerticle
 			});
 		});
 
+		router.get("/accounts/:email").handler(requestContext ->
+		{
+			String email = requestContext.request().getParam("email");
+			Logger.info("Received request for account info for email: " + email);
+			eventBus.<String>send(GetAccountHandler.ADDRESS, requestContext.request().getParam("email"), result ->
+			{
+				if (result.succeeded())
+				{
+					Logger.info("Fetched Account Info for email: " + email + " : " + result.result().body());
+
+					JsonObject responseBody = new JsonObject();
+					responseBody.put("accountInfo", new JsonObject(result.result().body()));
+
+					HttpServerResponse response = requestContext.response();
+					response.putHeader("content-type", "application/json");
+					response.end(responseBody.toString());
+				}
+				else
+				{
+					Logger.error("Failed to fetch account: " + email + " : " + result.cause());
+					requestContext.response().setStatusCode(500).end();
+				}
+			});
+		});
+
 		// Search Query
-		router.get("/query/:queryId").handler(request ->
+		router.get("/query/:queryId").handler(requestContext ->
 		{
 
 		});
