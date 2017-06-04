@@ -7,6 +7,7 @@ import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.json.JsonObject;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import com.garden2garden.events.AccountInfo;
 import com.garden2garden.persistence.IPersistenceLayer;
@@ -57,7 +58,7 @@ public class JsonFilePersistenceVerticle extends AbstractVerticle implements IPe
 		vertx.eventBus().<String>consumer(PersistenceProvider.FETCH_ACCOUNT, msg ->
 		{
 			AccountInfo accountInfo = getAccount(UUID.fromString(msg.body()));
-			msg.reply(JsonObject.mapFrom(accountInfo));
+			msg.reply(JsonObject.mapFrom(accountInfo).toString());
 		});
 	}
 
@@ -65,7 +66,19 @@ public class JsonFilePersistenceVerticle extends AbstractVerticle implements IPe
 	public AccountInfo getAccount(UUID accountId)
 	{
 		//ugh
-		return (AccountInfo) accountInfoMap.get(accountId.toString());
+		Object accountInfo = accountInfoMap.get(accountId.toString());
+		if (accountInfo != null)
+		{
+			if (accountInfo instanceof AccountInfo)
+			{
+				return (AccountInfo) accountInfo;
+			}
+			else
+			{
+				return new JsonObject((Map<String,Object>)accountInfo).mapTo(AccountInfo.class);
+			}
+		}
+		return new AccountInfo();
 	}
 
 	@Override
