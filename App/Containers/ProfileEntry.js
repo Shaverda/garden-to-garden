@@ -80,6 +80,7 @@ var ProfileEntry = React.createClass({
                     <TouchableHighlight  style={form_styles.button} onPress={this.onPress} underlayColor='#99d9f4'>
                         <Text style={form_styles.buttonText}>Submit</Text>
                     </TouchableHighlight>
+                    
                 </View>
                 )
     }

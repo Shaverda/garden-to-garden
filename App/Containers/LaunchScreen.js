@@ -18,9 +18,7 @@ export default class LaunchScreen extends React.Component {
           <View style={styles.centered}>
             <Image source={Images.launch} style={styles.logo} />
             <View style={styles.section} >
-            <Text style={styles.sectionText}>
-            a farmer's market in your pocket
-            </Text>
+                <Image source={Images.catchphrase} style={styles.catchphrase}/>
             </View>
           </View>
           <View style={styles.buttons}>
