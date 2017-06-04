@@ -1312,9 +1312,9 @@ core-js@^2.2.2, core-js@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.4.1.tgz#4de911e667b0eae9124e34254b53aea6fc618d3e"
 
-core-util-is@~1.0.0:
+core-com.garden2garden.util-is@~1.0.0:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
+  resolved "https://registry.yarnpkg.com/core-com.garden2garden.util-is/-/core-com.garden2garden.util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
 crc@3.3.0:
   version "3.3.0"
@@ -1978,7 +1978,7 @@ fbjs-scripts@^0.7.0:
     babel-preset-fbjs "^1.0.0"
     core-js "^1.0.0"
     cross-spawn "^3.0.1"
-    gulp-util "^3.0.4"
+    gulp-com.garden2garden.util "^3.0.4"
     object-assign "^4.0.1"
     semver "^5.1.0"
     through2 "^2.0.0"
@@ -2243,9 +2243,9 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-gulp-util@^3.0.4:
+gulp-com.garden2garden.util@^3.0.4:
   version "3.0.8"
-  resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
+  resolved "https://registry.yarnpkg.com/gulp-com.garden2garden.util/-/gulp-com.garden2garden.util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
     array-differ "^1.0.0"
     array-uniq "^1.0.2"
@@ -2755,12 +2755,12 @@ jest-cli@^20.0.4:
     jest-environment-jsdom "^20.0.3"
     jest-haste-map "^20.0.4"
     jest-jasmine2 "^20.0.4"
-    jest-message-util "^20.0.3"
-    jest-regex-util "^20.0.3"
+    jest-message-com.garden2garden.util "^20.0.3"
+    jest-regex-com.garden2garden.util "^20.0.3"
     jest-resolve-dependencies "^20.0.3"
     jest-runtime "^20.0.4"
     jest-snapshot "^20.0.3"
-    jest-util "^20.0.3"
+    jest-com.garden2garden.util "^20.0.3"
     micromatch "^2.3.11"
     node-notifier "^5.0.2"
     pify "^2.3.0"
@@ -2781,7 +2781,7 @@ jest-config@^20.0.4:
     jest-environment-node "^20.0.3"
     jest-jasmine2 "^20.0.4"
     jest-matcher-utils "^20.0.3"
-    jest-regex-util "^20.0.3"
+    jest-regex-com.garden2garden.util "^20.0.3"
     jest-resolve "^20.0.4"
     jest-validate "^20.0.3"
     pretty-format "^20.0.3"
@@ -2804,7 +2804,7 @@ jest-environment-jsdom@^20.0.3:
   resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-20.0.3.tgz#048a8ac12ee225f7190417713834bb999787de99"
   dependencies:
     jest-mock "^20.0.3"
-    jest-util "^20.0.3"
+    jest-com.garden2garden.util "^20.0.3"
     jsdom "^9.12.0"
 
 jest-environment-node@^20.0.3:
@@ -2812,7 +2812,7 @@ jest-environment-node@^20.0.3:
   resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-20.0.3.tgz#d488bc4612af2c246e986e8ae7671a099163d403"
   dependencies:
     jest-mock "^20.0.3"
-    jest-util "^20.0.3"
+    jest-com.garden2garden.util "^20.0.3"
 
 jest-haste-map@18.0.0:
   version "18.0.0"
@@ -2844,7 +2844,7 @@ jest-jasmine2@^20.0.4:
     jest-diff "^20.0.3"
     jest-matcher-utils "^20.0.3"
     jest-matchers "^20.0.3"
-    jest-message-util "^20.0.3"
+    jest-message-com.garden2garden.util "^20.0.3"
     jest-snapshot "^20.0.3"
     once "^1.4.0"
     p-map "^1.1.1"
@@ -2862,12 +2862,12 @@ jest-matchers@^20.0.3:
   dependencies:
     jest-diff "^20.0.3"
     jest-matcher-utils "^20.0.3"
-    jest-message-util "^20.0.3"
-    jest-regex-util "^20.0.3"
+    jest-message-com.garden2garden.util "^20.0.3"
+    jest-regex-com.garden2garden.util "^20.0.3"
 
-jest-message-util@^20.0.3:
+jest-message-com.garden2garden.util@^20.0.3:
   version "20.0.3"
-  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-20.0.3.tgz#6aec2844306fcb0e6e74d5796c1006d96fdd831c"
+  resolved "https://registry.yarnpkg.com/jest-message-com.garden2garden.util/-/jest-message-com.garden2garden.util-20.0.3.tgz#6aec2844306fcb0e6e74d5796c1006d96fdd831c"
   dependencies:
     chalk "^1.1.3"
     micromatch "^2.3.11"
@@ -2877,15 +2877,15 @@ jest-mock@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-20.0.3.tgz#8bc070e90414aa155c11a8d64c869a0d5c71da59"
 
-jest-regex-util@^20.0.3:
+jest-regex-com.garden2garden.util@^20.0.3:
   version "20.0.3"
-  resolved "https://registry.yarnpkg.com/jest-regex-util/-/jest-regex-util-20.0.3.tgz#85bbab5d133e44625b19faf8c6aa5122d085d762"
+  resolved "https://registry.yarnpkg.com/jest-regex-com.garden2garden.util/-/jest-regex-com.garden2garden.util-20.0.3.tgz#85bbab5d133e44625b19faf8c6aa5122d085d762"
 
 jest-resolve-dependencies@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-20.0.3.tgz#6e14a7b717af0f2cb3667c549de40af017b1723a"
   dependencies:
-    jest-regex-util "^20.0.3"
+    jest-regex-com.garden2garden.util "^20.0.3"
 
 jest-resolve@^20.0.4:
   version "20.0.4"
@@ -2907,9 +2907,9 @@ jest-runtime@^20.0.4:
     graceful-fs "^4.1.11"
     jest-config "^20.0.4"
     jest-haste-map "^20.0.4"
-    jest-regex-util "^20.0.3"
+    jest-regex-com.garden2garden.util "^20.0.3"
     jest-resolve "^20.0.4"
-    jest-util "^20.0.3"
+    jest-com.garden2garden.util "^20.0.3"
     json-stable-stringify "^1.0.1"
     micromatch "^2.3.11"
     strip-bom "3.0.0"
@@ -2922,17 +2922,17 @@ jest-snapshot@^20.0.3:
     chalk "^1.1.3"
     jest-diff "^20.0.3"
     jest-matcher-utils "^20.0.3"
-    jest-util "^20.0.3"
+    jest-com.garden2garden.util "^20.0.3"
     natural-compare "^1.4.0"
     pretty-format "^20.0.3"
 
-jest-util@^20.0.3:
+jest-com.garden2garden.util@^20.0.3:
   version "20.0.3"
-  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-20.0.3.tgz#0c07f7d80d82f4e5a67c6f8b9c3fe7f65cfd32ad"
+  resolved "https://registry.yarnpkg.com/jest-com.garden2garden.util/-/jest-com.garden2garden.util-20.0.3.tgz#0c07f7d80d82f4e5a67c6f8b9c3fe7f65cfd32ad"
   dependencies:
     chalk "^1.1.3"
     graceful-fs "^4.1.11"
-    jest-message-util "^20.0.3"
+    jest-message-com.garden2garden.util "^20.0.3"
     jest-mock "^20.0.3"
     jest-validate "^20.0.3"
     leven "^2.1.0"
@@ -3815,7 +3815,7 @@ plist@1.2.0, plist@^1.2.0:
   resolved "https://registry.yarnpkg.com/plist/-/plist-1.2.0.tgz#084b5093ddc92506e259f874b8d9b1afb8c79593"
   dependencies:
     base64-js "0.0.8"
-    util-deprecate "1.0.2"
+    com.garden2garden.util-deprecate "1.0.2"
     xmlbuilder "4.0.0"
     xmldom "0.1.x"
 
@@ -4187,19 +4187,19 @@ readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.1.5, readable
   version "2.2.10"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.10.tgz#effe72bb7c884c0dd335e2379d526196d9d011ee"
   dependencies:
-    core-util-is "~1.0.0"
+    core-com.garden2garden.util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
     process-nextick-args "~1.0.6"
     safe-buffer "^5.0.1"
     string_decoder "~1.0.0"
-    util-deprecate "~1.0.1"
+    com.garden2garden.util-deprecate "~1.0.1"
 
 readable-stream@~1.1.8, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
-    core-util-is "~1.0.0"
+    core-com.garden2garden.util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "0.0.1"
     string_decoder "~0.10.x"
@@ -4962,9 +4962,9 @@ user-home@^2.0.0:
   dependencies:
     os-homedir "^1.0.0"
 
-util-deprecate@1.0.2, util-deprecate@~1.0.1:
+com.garden2garden.util-deprecate@1.0.2, com.garden2garden.util-deprecate@~1.0.1:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+  resolved "https://registry.yarnpkg.com/com.garden2garden.util-deprecate/-/com.garden2garden.util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
 utils-merge@1.0.0:
   version "1.0.0"

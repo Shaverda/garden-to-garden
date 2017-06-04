@@ -16,20 +16,19 @@ repositories {
     }
 }
 
-vertxVersion = '3.4.1'
 sourceCompatibility = '1.8'
 mainClassName = 'io.vertx.core.Launcher'
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile "io.vertx:vertx-core:$vertxVersion"
-    compile "io.vertx:vertx-web:$vertxVersion"
+    compile "io.vertx:vertx-core:3.4.1"
+    compile "io.vertx:vertx-web:3.4.1"
 }
 
 shadowJar {
     classifier = 'fat'
     manifest {
-        attributes 'Main-Verticle': 'io.vertx.example.HelloWorldVerticle'
+        attributes 'Main-Verticle': 'com.garden2garden.httpserver.HttpServerVerticle'
     }
     mergeServiceFiles {
         include 'META-INF/services/io.vertx.core.spi.VerticleFactory'
@@ -39,5 +38,5 @@ shadowJar {
 task wrapper(type: Wrapper) {
     //gradleVersion = '2.13'
     gradleVersion = '3.1.4'
-    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+    distributionUrl = "https://services.gradle.org/distributions/gradle-3.4.1-all.zip"
 }
