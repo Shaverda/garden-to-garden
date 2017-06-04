@@ -1,3 +1,7 @@
+# File based peristence.......
+#
+accountStore.json
+
 # OSX
 #
 .DS_Store
