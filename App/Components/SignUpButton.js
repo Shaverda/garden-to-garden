@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Modal } from 'react-native'
+import { View, TouchableOpacity, Text } from 'react-native'
 import RoundedButton from './RoundedButton'
+import styles from './Styles/SignUpButtonStyles'
 
 export default class SignUpButton extends React.Component {
     constructor (props) {
@@ -13,9 +14,11 @@ export default class SignUpButton extends React.Component {
             
             return (
                     <View>
-                    <RoundedButton onPress={this.props.onPress}>
+                    <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
+                    <Text style={styles.buttonText}>
                     Sign Up
-                    </RoundedButton>
+                    </Text>
+                    </TouchableOpacity>
                     </View>
                     )
 

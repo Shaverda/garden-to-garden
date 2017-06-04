@@ -22,6 +22,9 @@ export default StyleSheet.create({
   padding: 10
  },
  sectionText: {
-  
-}
+  textAlign: 'center'
+},
+ buttons: {
+    marginTop: 130
+ }
 })

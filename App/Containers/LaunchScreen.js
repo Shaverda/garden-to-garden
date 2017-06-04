@@ -1,8 +1,8 @@
 import React from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, Button } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
 import SignUpButton from '../Components/SignUpButton.js'
-
+import LoginButton from '../Components/LoginButton.js'
 import { Images } from '../Themes'
 
 // Styles
@@ -13,30 +13,21 @@ export default class LaunchScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.mainContainer}>
+        <Image source={Images.background} style={styles.backgroundImage} resizeMode='repeat' />
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
             <Image source={Images.launch} style={styles.logo} />
-          </View>
-
-          <View style={styles.section} >
+            <View style={styles.section} >
             <Text style={styles.sectionText}>
-            Welcome to the site.
-            Whether you garden yourself, want fresh veggies,
-            or any other reason, we are glad you are here.
-            {"\n"}
-            {"\n"}
-            On your profile, you upload a personal picture
-            which ideally includes your face.  Once that's
-            completed, you put in your zip code and start
-            listed the vegetables, spices, fruits, herbs,
-            and flowers you are growing.  Immediately next
-            to your column of items you are growing is a
-            "ready by" section.  This lets everyone know
-            when the item you are growing is ready to swap.
+            a farmer's market in your pocket
             </Text>
+            </View>
           </View>
+          <View style={styles.buttons}>
+          </View>
+          <Button title="Learn More" onPress={()=>navigate('AboutScreen')}/>
           <SignUpButton onPress={()=>navigate('ProfileEntry')}/>
-          <DevscreensButton />
+          <LoginButton onPress={()=>navigate('ProfileDisplay')}/>
         </ScrollView>
       </View>
     )
