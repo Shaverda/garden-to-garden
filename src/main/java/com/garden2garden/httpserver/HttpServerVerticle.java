@@ -1,6 +1,7 @@
 package com.garden2garden.httpserver;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.buffer.Buffer;
@@ -12,6 +13,7 @@ import io.vertx.ext.web.Router;
 import io.vertx.ext.web.handler.BodyHandler;
 
 import com.garden2garden.httpserver.handlers.CreateAccountHandler;
+import com.garden2garden.persistence.PersistenceProvider;
 import com.garden2garden.util.Logger;
 
 /**
@@ -54,12 +56,11 @@ public class HttpServerVerticle extends AbstractVerticle
 			}
 		});
 
-		vertx.deployVerticle(new CreateAccountHandler(), res ->
-		{
-			startFuture.complete();
-		});
+		vertx.deployVerticle(new CreateAccountHandler());
 
-//		startFuture.complete();
+		vertx.deployVerticle(PersistenceProvider.getPersistenceLayer());
+
+		startFuture.complete();
 	}
 
 	private void generateRoutes()

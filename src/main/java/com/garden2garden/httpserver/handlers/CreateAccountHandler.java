@@ -1,14 +1,17 @@
 package com.garden2garden.httpserver.handlers;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.eventbus.Message;
-import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 
+import com.garden2garden.events.AccountInfo;
 import com.garden2garden.events.CreateAccountRequest;
 import com.garden2garden.httpserver.exceptions.InvalidRequestException;
+import com.garden2garden.persistence.PersistenceProvider;
 import com.garden2garden.util.Logger;
 
 /**
@@ -69,7 +72,19 @@ public class CreateAccountHandler extends AbstractVerticle
 		UUID accountUUID = generateUUIDFromEmail(request);
 		Logger.log("Created new UUID for email: " + request.getEmail() + " : " + accountUUID);
 
-		// TODO: Create account in backend
+		vertx.eventBus().send(PersistenceProvider.CREATE_ACCOUNT, JsonObject.mapFrom(AccountInfo.accountInfoFromRequest(accountUUID, request)).encode(), reply ->
+		{
+			// Ok, dunno how to actually do error checking here, cause promises, can't block thread, T_T
+			if (reply.succeeded())
+			{
+				Logger.debug("Account created");
+			}
+			else
+			{
+				Logger.error("Account creation FAILED:");
+				Logger.error(reply.cause().getMessage() + " : " + reply.cause().toString());
+			}
+		});
 
 		return accountUUID;
 	}
