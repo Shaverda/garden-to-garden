@@ -25,8 +25,6 @@ export default StyleSheet.create({
      
      },
      profilePic: {
-         borderWidth: 2,
-         borderColor: 'black',
          width: 100,
          height: 100,
          marginVertical: 10

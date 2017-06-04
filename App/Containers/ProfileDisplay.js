@@ -8,6 +8,13 @@ import { Images } from '../Themes'
 import styles from './Styles/ProfileDisplayStyles'
 
 export default class ProfileDisplay extends React.Component {
+    componentDidMount() {
+       fetch('http://localhost:8080/accounts/jjefferi@vols.utk.edu')
+       .then((response) => {
+          console.log(response);
+        })
+    }
+    
     render () {
         return (
                 <View style={styles.mainContainer}>
@@ -15,8 +22,7 @@ export default class ProfileDisplay extends React.Component {
                 <ScrollView style={styles.container}>
                 
                 <View style={styles.section} >
-                <View style={styles.profilePic}>
-                </View>
+                <Image source={Images.tomatoFace} style={styles.profilePic} resizeMode='contain' />
                 <Text style={styles.sectionText}>
                 Your Profile!
                 </Text>

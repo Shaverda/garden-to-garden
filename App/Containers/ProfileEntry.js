@@ -46,7 +46,7 @@ var ProfileEntry = React.createClass({
         }
         console.log(this.state.position);
 
-        fetch('http://10.5.31.104:8080/accounts/create', {
+        fetch('http://localhost:8080/accounts/create', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -56,10 +56,7 @@ var ProfileEntry = React.createClass({
             accountName: value.username,
             email: value.email_address,
             password: value.password, 
-            location: {
-                x: this.state.latitude,
-                y: this.state.longitude
-            }
+            location: 'austin'
           })
         }).then((response) => {
           console.log(response);

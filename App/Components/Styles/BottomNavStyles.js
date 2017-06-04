@@ -3,13 +3,17 @@ import { Fonts, Colors, Metrics } from '../../Themes/'
 
 export default StyleSheet.create({
     button: {
-                                 flex: 1,
-                                 flexDirection: 'row',
+         flex: 1,
+         flexDirection: 'row',
         borderRadius: 0,
         marginHorizontal: Metrics.nav,
         marginVertical: 0,
-        backgroundColor: Colors.background,
-        justifyContent: 'center'
+        backgroundColor: 'snow',
+        justifyContent: 'center',
+        position: 'absolute',
+        bottom: 0,
+        height: 70,
+        width: 375
     },
     buttonText: {
        color: Colors.snow,
