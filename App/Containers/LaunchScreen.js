@@ -10,6 +10,7 @@ import styles from './Styles/LaunchScreenStyles'
 
 export default class LaunchScreen extends React.Component {
   render () {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>
@@ -34,7 +35,7 @@ export default class LaunchScreen extends React.Component {
             when the item you are growing is ready to swap.
             </Text>
           </View>
-          <SignUpButton />
+          <SignUpButton onPress={()=>navigate('ProfileEntry')}/>
           <DevscreensButton />
         </ScrollView>
       </View>

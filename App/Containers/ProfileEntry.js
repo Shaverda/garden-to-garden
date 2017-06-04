@@ -6,7 +6,7 @@ import { Images } from '../Themes'
 // Styles
 import styles from './Styles/ProfileEntryStyles'
 
-export default class LaunchScreen extends React.Component {
+export default class ProfileEntry extends React.Component {
     render () {
         return (
                 <View style={styles.mainContainer}>
