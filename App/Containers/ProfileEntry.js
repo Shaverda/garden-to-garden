@@ -45,7 +45,7 @@ var ProfileEntry = React.createClass({
           console.log(value); // value here is an instance of Person
         }
         console.log(this.state.position);
-
+        
         fetch('http://localhost:8080/accounts/create', {
           method: 'POST',
           headers: {
